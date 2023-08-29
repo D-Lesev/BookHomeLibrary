@@ -1,4 +1,8 @@
 from django.contrib import admin
+from .models import NewBookCreation
 
-# Register your models here.
+
+@admin.register(NewBookCreation)
+class BookCreationAdmin(admin.ModelAdmin):
+    list_display = ["title", "author", "genre"]
 
